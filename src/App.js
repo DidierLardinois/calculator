@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as math from 'mathjs';
 import './App.css';
+import logo from './logo.svg';
 
 function Calculator() {
   const [displayValue, setDisplayValue] = useState("0");
@@ -101,7 +102,9 @@ function Calculator() {
 
   return (
     <div id="calculator">
+      <div id="logoLeft"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="FreeCodeCamp logo" /></div>
       <div id="display">{displayValue}</div>
+      <div id="logoRight"><img src={logo} className="App-logo" alt="logo" /></div>
       <button id="zero" value="0" onClick={handleClick}>0</button>
       <button id="one" value="1" onClick={handleClick}>1</button>
       <button id="two" value="2" onClick={handleClick}>2</button>
